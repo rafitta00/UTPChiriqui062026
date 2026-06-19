@@ -1,9 +1,10 @@
-resource "azurerm_ai_services" "rag" {
+resource "azurerm_cognitive_account" "rag" {
   name                  = "${random_string.prefix.result}-${var.ai_services_name}"
   location              = data.azurerm_resource_group.this.location
   resource_group_name   = data.azurerm_resource_group.this.name
   sku_name              = var.ai_services_sku_name
   custom_subdomain_name = "${random_string.prefix.result}${var.ai_services_custom_subdomain_name}"
+  kind                  = "OpenAI"
 
   # Habilitar identidad administrada
   identity {
@@ -15,7 +16,7 @@ resource "azurerm_ai_services" "rag" {
 
 resource "azurerm_cognitive_deployment" "rag" {
   name                 = var.openai_deployment_name
-  cognitive_account_id = azurerm_ai_services.rag.id
+  cognitive_account_id = azurerm_cognitive_account.rag.id
 
   model {
     format  = "OpenAI"
