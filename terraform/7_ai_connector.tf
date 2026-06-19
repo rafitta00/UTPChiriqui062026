@@ -6,15 +6,15 @@ resource "azapi_resource" "connection_api_key" {
   body = {
     properties = {
       category = "AIServices",
-      target   = azurerm_ai_services.rag.endpoint
+      target   = azurerm_cognitive_account.rag.endpoint
       authType = "ApiKey",
       credentials = {
-        key = azurerm_ai_services.rag.primary_access_key
+        key = azurerm_cognitive_account.rag.primary_access_key
       }
       isSharedToAll = true,
       metadata = {
         ApiType    = "Azure",
-        ResourceId = azurerm_ai_services.rag.id
+        ResourceId = azurerm_cognitive_account.rag.id
       }
     }
   }
