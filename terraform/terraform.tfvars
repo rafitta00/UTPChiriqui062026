@@ -1,6 +1,6 @@
 ##### 0 - Variables - Configuración general de Azure #####
 subscription_id = "ab40ebfc-f6bc-456d-aea4-318dc3c9836c"
-
+user_object_id  = "239a46d4-ef12-4eff-8b78-3cda5146d043" # Reemplaza con el Object ID real del usuario o grupo
 ##### Variables - Configuración de despliegue y etiquetado #####
 environment = "dev"
 tags = {

@@ -28,3 +28,10 @@ resource "azurerm_ai_foundry_project" "rag" {
     type = "SystemAssigned"
   }
 }
+
+resource "azurerm_role_assignment" "data_foundry_user" {
+  scope                = data.azurerm_resource_group.this.id
+  role_definition_name = "Foundry User"
+  principal_id         = var.user_object_id
+
+}
