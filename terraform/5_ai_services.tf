@@ -4,7 +4,7 @@ resource "azurerm_cognitive_account" "rag" {
   resource_group_name   = data.azurerm_resource_group.this.name
   sku_name              = var.ai_services_sku_name
   custom_subdomain_name = "${random_string.prefix.result}${var.ai_services_custom_subdomain_name}"
-  kind                  = "aiservices"
+  kind                  = "AIServices"
 
   # Habilitar identidad administrada
   identity {
