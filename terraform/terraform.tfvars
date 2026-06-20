@@ -12,18 +12,18 @@ resource_group_name = "rg-utpdavid2026-user2-cc"
 location            = "eastus2"
 
 ##### Variables - Storage Account RAC #####
-storage_account_name  = ""
-container_name        = ""
+storage_account_name  = "holachiriqui"
+container_name        = "contenedor"
 container_access_type = "private" #
 
 ##### Variables - Key Vault del RAC #####
-key_vault_name = ""
+key_vault_name = "hola-holi-chiriqui"
 key_vault_sku  = "standard" # ejemplo: "standard"
 
 
 ##### Variables - Azure AI Services (Cognitive) #####
-ai_services_name                  = ""
-ai_services_custom_subdomain_name = ""
+ai_services_name                  = "ai-hola-chiriqui-david"
+ai_services_custom_subdomain_name = "ai-servicio"
 
 ##### Variables - Azure OpenAI (modelo) #####
 openai_deployment_name = "gpt5nano"
@@ -32,5 +32,5 @@ openai_model_version   = "2025-08-07"
 openai_scale_capacity  = 1
 
 ##### Variables - Azure AI Foundry (Hub/Proj) #####
-ai_foundry_hub_name     = ""
-ai_foundry_project_name = ""
+ai_foundry_hub_name     = "ia-hola"
+ai_foundry_project_name = "ia-hola-hola"
